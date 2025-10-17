@@ -5,11 +5,16 @@ O objetivo é desenvolver um website de agendamentos de salas para o HUB de Coro
 
 GRUPO:
 
-Daniel Caitano
-Eduardo Luís
-Lucas Henrique
-Mayan Patrick
-Emaniel Scapim
-Thiago Dias Jardim
+  Daniel Caitano
+
+  Eduardo Luís
+
+  Lucas Henrique
+
+  Mayan Patrick
+
+  Emanuel Scapim
+
+  Thiago Dias Jardim
 
 Baixe a documentação do nosso projeto para saber mais detalhes!
