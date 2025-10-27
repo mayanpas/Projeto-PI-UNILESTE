@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.projecthubfabri;
+package projetoHUB;
 
-/**
- *
- * @author Precision
- */
+
 public class PessoaFisica extends Usuario {
     private int dataNascimento;
 
@@ -16,8 +9,13 @@ public class PessoaFisica extends Usuario {
         this.dataNascimento = dataNascimento;
     }
 
-    public int getDataNascimento() { return dataNascimento; }
-    public void setDataNascimento(int dataNascimento) { this.dataNascimento = dataNascimento; }
+    public int getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(int dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
 
     @Override
     public boolean pessoaJuridica() {

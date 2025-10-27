@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.projecthubfabri;
+package projetoHUB;
+import java.time.LocalTime;
 
 public class Reserva {
     private String id;
@@ -13,7 +10,7 @@ public class Reserva {
     private String finalidade;
     private Status status;
 
-    public Reserva(String id, Ambiente ambiente, Usuario usuario, DataHora dataReserva, 
+    public Reserva(String id, Ambiente ambiente, Usuario usuario, DataHora dataReserva,
                    int quantidadePessoas, String finalidade) {
         this.id = id;
         this.ambiente = ambiente;
@@ -29,7 +26,7 @@ public class Reserva {
         if (!ambiente.verificarDisponibilidade(dataReserva)) {
             throw new IllegalArgumentException("Ambiente não disponível para o horário selecionado");
         }
-        
+
         if (quantidadePessoas > ambiente.getOcupacaoMaxima()) {
             throw new IllegalArgumentException("Quantidade de pessoas excede a capacidade máxima do ambiente");
         }
@@ -37,7 +34,7 @@ public class Reserva {
         Reserva reserva = new Reserva(id, ambiente, usuario, dataReserva, quantidadePessoas, finalidade);
         ambiente.addReserva(reserva);
         usuario.addReserva(reserva);
-        
+
         return reserva;
     }
 
@@ -45,26 +42,42 @@ public class Reserva {
         return !(dataReserva.getHoraSaida().isBefore(inicio) || dataReserva.getHoraEntrada().isAfter(fim));
     }
 
-    // Getters e Setters
-    public String getId() { return id; }
-    public Ambiente getAmbiente() { return ambiente; }
-    public Usuario getUsuario() { return usuario; }
-    public DataHora getDataReserva() { return dataReserva; }
-    public int getQuantidadePessoas() { return quantidadePessoas; }
-    public String getFinalidade() { return finalidade; }
-    public Status getStatus() { return status; }
-    public void setStatus(Status status) { this.status = status; }
+    public String getId() {
+        return id;
+    }
+
+    public Ambiente getAmbiente() {
+        return ambiente;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public DataHora getDataReserva() {
+        return dataReserva;
+    }
+
+    public int getQuantidadePessoas() {
+        return quantidadePessoas;
+    }
+
+    public String getFinalidade() {
+        return finalidade;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 
     @Override
     public String toString() {
-        return "Reserva{" +
-                "id='" + id + '\'' +
-                ", ambiente=" + ambiente.getNome() +
-                ", usuario=" + usuario.getNome() +
-                ", dataHora=" + dataReserva +
-                ", pessoas=" + quantidadePessoas +
-                ", finalidade='" + finalidade + '\'' +
-                ", status=" + status.getStatusAprovacao() +
-                '}';
+        return "Reserva{" + "id='" + id + '\'' + ", ambiente=" + ambiente.getNome() + ", usuario=" + usuario.getNome() +
+                ", dataHora=" + dataReserva + ", pessoas=" + quantidadePessoas + ", finalidade='" + finalidade +
+                '\'' + ", status=" + status.getStatusAprovacao() + '}';
     }
 }
