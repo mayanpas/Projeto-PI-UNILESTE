@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.projecthubfabri;
+package projetoHUB;
 
-/**
- *
- * @author Precision
- */
 public class Administrador extends Usuario {
     private String permissions;
 
@@ -16,8 +8,13 @@ public class Administrador extends Usuario {
         this.permissions = permissions;
     }
 
-    public String getPermissions() { return permissions; }
-    public void setPermissions(String permissions) { this.permissions = permissions; }
+    public String getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(String permissions) {
+        this.permissions = permissions;
+    }
 
     public void permissao() {
         System.out.println("Administrador " + nome + " possui permissões: " + permissions);

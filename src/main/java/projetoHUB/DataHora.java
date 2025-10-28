@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.projecthubfabri;
+package projetoHUB;
+
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -22,18 +19,26 @@ public class DataHora {
     public static DataHora reservaSala(String dataStr, String horaEntradaStr, String horaSaidaStr) {
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
-        
+
         LocalDate data = LocalDate.parse(dataStr, dateFormatter);
         LocalTime entrada = LocalTime.parse(horaEntradaStr, timeFormatter);
         LocalTime saida = LocalTime.parse(horaSaidaStr, timeFormatter);
-        
+
         return new DataHora(data, entrada, saida);
     }
 
     // Getters
-    public LocalDate getData() { return dataReserva; }
-    public LocalTime getHoraEntrada() { return horaEntrada; }
-    public LocalTime getHoraSaida() { return horaSaida; }
+    public LocalDate getData() {
+        return dataReserva;
+    }
+
+    public LocalTime getHoraEntrada() {
+        return horaEntrada;
+    }
+
+    public LocalTime getHoraSaida() {
+        return horaSaida;
+    }
 
     @Override
     public String toString() {

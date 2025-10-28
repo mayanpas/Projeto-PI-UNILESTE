@@ -1,14 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.projecthubfabri;
+package projetoHUB;
+
 
 public class Status {
     private String idStatus;
     private String reservaId;
     private String administratorId;
-    private String statusAprovacao; // "APROVADO", "PENDENTE", "REJEITADO"
+    private String statusAprovacao;
 
     public Status(String statusAprovacao, Reserva reserva) {
         this.idStatus = "STATUS_" + reserva.getId();
@@ -26,14 +23,12 @@ public class Status {
         this.administratorId = String.valueOf(administrador.getId());
     }
 
-    // Getters
     public String getIdStatus() { return idStatus; }
     public String getReservaId() { return reservaId; }
     public String getAdministratorId() { return administratorId; }
     public String getStatusAprovacao() { return statusAprovacao; }
 
     public Reserva reservar() {
-        // Este método parece estar no diagrama mas a lógica está na classe Reserva
         System.out.println("Método reservar - implementação na classe Reserva");
         return null;
     }

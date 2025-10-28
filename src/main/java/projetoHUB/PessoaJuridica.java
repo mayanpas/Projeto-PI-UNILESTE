@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.projecthubfabri;
+package projetoHUB;
 
-/**
- *
- * @author Precision
- */
+
 public class PessoaJuridica extends Usuario {
     private String cnpj;
     private String areaAtuacao;
@@ -18,11 +11,21 @@ public class PessoaJuridica extends Usuario {
         this.areaAtuacao = areaAtuacao;
     }
 
-    public String getCnpj() { return cnpj; }
-    public void setCnpj(String cnpj) { this.cnpj = cnpj; }
+    public String getCnpj() {
+        return cnpj;
+    }
 
-    public String getAreaAtuacao() { return areaAtuacao; }
-    public void setAreaAtuacao(String areaAtuacao) { this.areaAtuacao = areaAtuacao; }
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public String getAreaAtuacao() {
+        return areaAtuacao;
+    }
+
+    public void setAreaAtuacao(String areaAtuacao) {
+        this.areaAtuacao = areaAtuacao;
+    }
 
     @Override
     public boolean pessoaJuridica() {
