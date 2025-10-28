@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ProjetoHubApplication {
 
-     static void main(String[] args) {
+     public static void main(String[] args) {
         SpringApplication.run(ProjetoHubApplication.class, args);
         System.out.println("🚀 Aplicação iniciada!");
         System.out.println("📍 Acesse: http://localhost:8080");
